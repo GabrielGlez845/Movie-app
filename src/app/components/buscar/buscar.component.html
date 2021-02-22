@@ -1,0 +1,19 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col" [formGroup]="forma">
+            <input type="text" (keyup)="buscar()" class="form-control" placeholder="Buscar pelicula" formControlName="texto">
+        </div>
+    </div>
+
+</div>
+<br>
+
+<div class="card-columns">
+    <div class="card tabla" *ngFor="let pelicula of peliculas" (click)="verPelicula( pelicula )">
+        <img class="card-img-top " src="{{pelicula.poster_path | noimage}}" alt="Card image cap ">
+        <div class="card-body ">
+            <h5 class="card-title ">{{pelicula.title}} </h5>
+        </div>
+    </div>
+</div>

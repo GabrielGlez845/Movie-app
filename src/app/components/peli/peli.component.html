@@ -1,0 +1,17 @@
+<div class="container">
+    <h1>{{pelicula.title}}</h1>
+    <br>
+    <div class="row">
+
+        <div class="col">
+            <img class="img-thumbnail" src="{{pelicula.poster_path | noimage}}" alt="">
+        </div>
+        <div class="col-8">
+            <h3>{{pelicula.tagline}}</h3>
+            <hr>
+            <p class="text-justify">{{pelicula.overview}}</p>
+            <br>
+            <button class="btn btn-outline-danger btn-block" [routerLink]="['/'+regresar, busqueda]">Regresar</button>
+        </div>
+    </div>
+</div>

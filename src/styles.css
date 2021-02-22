@@ -1,0 +1,96 @@
+/* You can add global styles to this file, and also import other style files 
+ { path: 'buscar/:par', component: BuscarComponent },
+  { path: 'peli/:id/:dir', component: PeliComponent },
+  { path: 'peli/:id/:dir/:busqueda', component: PeliComponent }, */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/*Tabla de precios*/
+
+div.tabla {
+    border: 1px solid #e1e1e1;
+    background-color: #ffffff;
+    text-align: center;
+    margin-top: 15px;
+    transition: all .3s ease;
+}
+
+div.tabla:hover {
+    transform: scale(1.03);
+    border: 1px solid #fe4918;
+    box-shadow: 0px 0px 50px #666;
+    cursor: pointer;
+}
+
+
+/*
+div.tabla-precio ul li {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #868686;
+    line-height: 20px;
+}
+
+div.tabla-precio ul li:before {
+    font-family: "FontAwesome";
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 5px;
+    font-size: 20px;
+    color: green;
+    -webkit-font-smoothing: antialiased;
+    content: "\f00c";
+}
+
+
+service 
+ getPopulares(){
+    const url = `${this.urlMoviedb}/movie/popular?api_key=${ this.apikey }&language=es`;
+
+    return this.http.jsonp(url, 'callback=JSONP_CALLBACK' ).pipe(map((resp: any) => {
+        return resp.results;
+    }));
+  }
+
+
+component
+ populares: any[] = [];
+
+constructor( public pelisService: PeliculasService,
+               private router: Router) { 
+    this.pelisService.getPopulares().subscribe((resp)  => {
+    this.populares = resp;
+  });
+  }
+
+
+html
+
+<h1>Populares</h1>
+<hr>
+<div class="card-columns">
+    <div class="card tabla" *ngFor="let popular of populares" (click)="verPelicula( popular )">
+        <img class="img-thumbnail img-fluid" class="card-img-top " src="{{popular.poster_path | noimage}}" alt="Card image cap ">
+        <div class="card-body ">
+            <h5 class="card-title ">{{popular.title}} </h5>
+        </div>
+    </div>
+</div>
+
+*/

@@ -1,0 +1,10 @@
+<h1>Populares</h1>
+<hr>
+<div class="card-columns">
+    <div class="card tabla" *ngFor="let popular of populares" (click)="verPelicula( popular )">
+        <img class="img-thumbnail img-fluid" class="card-img-top " src="{{popular.poster_path | noimage}}" alt="Card image cap ">
+        <div class="card-body ">
+            <h5 class="card-title ">{{popular.title}} </h5>
+        </div>
+    </div>
+</div>
